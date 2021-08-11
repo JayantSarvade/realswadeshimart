@@ -1,6 +1,7 @@
 {% load static %}
 
 <header class="header header-intro-clearance header-4">
+    {% comment %}
     <div class="header-top">
         <div class="container">
             <div class="header-left">
@@ -44,6 +45,7 @@
 
         </div><!-- End .container -->
     </div><!-- End .header-top -->
+    {% endcomment %}
 
     <div class="header-middle">
         <div class="container">
@@ -54,7 +56,8 @@
                 </button>
 
                 <a href="/" class="logo">
-                    <img src="{% static 'assets/images/demos/demo-4/logo.png' %} " alt="Molla Logo" width="105" height="25">
+                    <img src="{% static 'assets/images/demos/demo-4/logo.png' %} " alt="Molla Logo" width="105"
+                        height="25">
                 </a>
             </div><!-- End .header-left -->
 
@@ -139,7 +142,8 @@
 
                                 <figure class="product-image-container">
                                     <a href="product.html" class="product-image">
-                                        <img src="{% static 'assets/images/products/cart/product-1.jpg' %} " alt="product">
+                                        <img src="{% static 'assets/images/products/cart/product-1.jpg' %} "
+                                            alt="product">
                                     </a>
                                 </figure>
                                 <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -159,7 +163,8 @@
 
                                 <figure class="product-image-container">
                                     <a href="product.html" class="product-image">
-                                        <img src="{% static 'assets/images/products/cart/product-2.jpg' %} " alt="product">
+                                        <img src="{% static 'assets/images/products/cart/product-2.jpg' %} "
+                                            alt="product">
                                     </a>
                                 </figure>
                                 <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -173,7 +178,7 @@
                         </div><!-- End .dropdown-cart-total -->
 
                         <div class="dropdown-cart-action">
-                            <a href="cart.html" class="btn btn-primary">View Cart</a>
+                            <a href="{% url 'cart' %}" class="btn btn-primary">View Cart</a>
                             <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i
                                     class="icon-long-arrow-right"></i></a>
                         </div><!-- End .dropdown-cart-total -->
@@ -458,37 +463,43 @@
                                             <div class="row">
                                                 <div class="col-lg-2">
                                                     <a href="#" class="brand">
-                                                        <img src="{% static 'assets/images/brands/1.png' %} " alt="Brand Name">
+                                                        <img src="{% static 'assets/images/brands/1.png' %} "
+                                                            alt="Brand Name">
                                                     </a>
                                                 </div><!-- End .col-lg-2 -->
 
                                                 <div class="col-lg-2">
                                                     <a href="#" class="brand">
-                                                        <img src="{% static 'assets/images/brands/2.png' %} " alt="Brand Name">
+                                                        <img src="{% static 'assets/images/brands/2.png' %} "
+                                                            alt="Brand Name">
                                                     </a>
                                                 </div><!-- End .col-lg-2 -->
 
                                                 <div class="col-lg-2">
                                                     <a href="#" class="brand">
-                                                        <img src="{% static 'assets/images/brands/3.png' %} " alt="Brand Name">
+                                                        <img src="{% static 'assets/images/brands/3.png' %} "
+                                                            alt="Brand Name">
                                                     </a>
                                                 </div><!-- End .col-lg-2 -->
 
                                                 <div class="col-lg-2">
                                                     <a href="#" class="brand">
-                                                        <img src="{% static 'assets/images/brands/4.png' %} " alt="Brand Name">
+                                                        <img src="{% static 'assets/images/brands/4.png' %} "
+                                                            alt="Brand Name">
                                                     </a>
                                                 </div><!-- End .col-lg-2 -->
 
                                                 <div class="col-lg-2">
                                                     <a href="#" class="brand">
-                                                        <img src="{% static 'assets/images/brands/5.png' %} " alt="Brand Name">
+                                                        <img src="{% static 'assets/images/brands/5.png' %} "
+                                                            alt="Brand Name">
                                                     </a>
                                                 </div><!-- End .col-lg-2 -->
 
                                                 <div class="col-lg-2">
                                                     <a href="#" class="brand">
-                                                        <img src="{% static 'assets/images/brands/6.png' %} " alt="Brand Name">
+                                                        <img src="{% static 'assets/images/brands/6.png' %} "
+                                                            alt="Brand Name">
                                                     </a>
                                                 </div><!-- End .col-lg-2 -->
                                             </div><!-- End .row -->
@@ -511,9 +522,10 @@
                 <nav class="main-nav">
                     <ul class="menu ">
                         <li class="megamenu-container active">
-                            <a href="/" class="sf-with-ul">Home</a>
+                            <a href="/" {% comment %} class="sf-with-ul" {% endcomment %}>Home</a>
 
-                            {% comment %} <div class="megamenu demo">
+                            {% comment %}
+                            <div class="megamenu demo">
                                 <div class="menu-col">
                                     <div class="menu-title">Choose your demo</div><!-- End .menu-title -->
 
@@ -717,34 +729,41 @@
                                                 Demos</span><i class="icon-long-arrow-right"></i></a>
                                     </div><!-- End .text-center -->
                                 </div><!-- End .menu-col -->
-                            </div>End .megamenu {% endcomment %}
+                            </div><!-- End .megamenu demo -->
+                            {% endcomment %}
                         </li>
                         <li>
-                            <a href="category.html" >Shop</a>
+                            <a href="category.html">Shop</a>
 
-                            <div class="megamenu megamenu-md">
+                            <div class="megamenu megamenu-sm">
                                 <div class="row no-gutters">
                                     <div class="col-md-8">
+
                                         <div class="menu-col">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    {% comment %} <div class="menu-title">Shop with sidebar</div> {% endcomment %}
+                                                    {% comment %}
+                                                    <div class="menu-title">Shop with sidebar</div>
+                                                    {% endcomment %}
                                                     <ul>
-                                                        <li><a href="category-list.html">Shop List</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
+                                                        <li><a href=" {% url 'list' %}">Shop List</a></li>
+                                                        <li><a href="{% url 'cart' %}">Cart</a></li>
                                                         <li><a href="checkout.html">Checkout</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                                        <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
                                                         <li><a href="dashboard.html">My Account</a></li>
                                                         <li><a href="#">Lookbook</a></li>
-                                                        {% comment %} <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
+                                                        {% comment %}
+                                                        <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
                                                         <li><a href="category.html">Shop Grid 3 Columns</a></li>
                                                         <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
                                                         <li><a href="category-market.html"><span>Shop Market<span
-                                                                        class="tip tip-new">New</span></span></a></li> {% endcomment %}
+                                                                        class="tip tip-new">New</span></span></a></li>
+                                                        {% endcomment %}
                                                     </ul>
                                                     <!-- End .menu-title -->
 
-                                                    {% comment %} <div class="menu-title">Shop no sidebar</div>
+                                                    {% comment %}
+                                                    <div class="menu-title">Shop no sidebar</div>
                                                     <!-- End .menu-title -->
                                                     <ul>
                                                         <li><a href="category-boxed.html"><span>Shop Boxed No
@@ -752,11 +771,14 @@
                                                                         class="tip tip-hot">Hot</span></span></a></li>
                                                         <li><a href="category-fullwidth.html">Shop Fullwidth No
                                                                 Sidebar</a></li>
-                                                    </ul> {% endcomment %}
+                                                    </ul>
+                                                    {% endcomment %}
                                                 </div><!-- End .col-md-6 -->
 
-                                                {% comment %}<div class="col-md-6">
-                                                     <div class="menu-title">Product Category</div>
+
+                                                {% comment %}
+                                                <div class="col-md-6">
+                                                    <div class="menu-title">Product Category</div>
                                                     <!-- End .menu-title -->
                                                     <ul>
                                                         <li><a href="product-category-boxed.html">Product Category
@@ -765,20 +787,23 @@
                                                                     Category Fullwidth<span
                                                                         class="tip tip-new">New</span></span></a></li>
                                                     </ul>
-                                                    <div class="menu-title">Shop Pages</div><!-- End .menu-title --> 
+                                                    <div class="menu-title">Shop Pages</div><!-- End .menu-title -->
                                                     <ul>
-                                                        <li><a href="cart.html">Cart</a></li>
+                                                        <li><a href="{% url 'cart' %}">Cart</a></li>
                                                         <li><a href="checkout.html">Checkout</a></li>
                                                         <li><a href="wishlist.html">Wishlist</a></li>
                                                         <li><a href="dashboard.html">My Account</a></li>
                                                         <li><a href="#">Lookbook</a></li>
                                                     </ul>
-                                                </div><!-- End .col-md-6 -->{% endcomment %}
+                                                </div><!-- End .col-md-6 -->
+                                                {% endcomment %}
                                             </div><!-- End .row -->
+
                                         </div><!-- End .menu-col -->
+
                                     </div><!-- End .col-md-8 -->
 
-                                    {% comment %} <div class="col-md-4">
+                                    <div class="col-md-4">
                                         <div class="banner banner-overlay">
                                             <a href="category.html" class="banner banner-menu">
                                                 <img src="{% static 'assets/images/menu/banner-1.jpg' %} " alt="Banner">
@@ -791,7 +816,7 @@
                                                 </div><!-- End .banner-content -->
                                             </a>
                                         </div><!-- End .banner banner-overlay -->
-                                    </div><!-- End .col-md-4 --> {% endcomment %}
+                                    </div><!-- End .col-md-4 -->
                                 </div><!-- End .row -->
                             </div><!-- End .megamenu megamenu-md -->
                         </li>
@@ -833,7 +858,8 @@
                                 </div><!-- End .row -->
                             </div><!-- End .megamenu megamenu-sm -->
                         </li>
-                        {% comment %} <li>
+                        {% comment %}
+                        <li>
                             <a href="#" class="sf-with-ul">Pages</a>
 
                             <ul>
@@ -919,13 +945,14 @@
                                 <li><a href="elements-cta.html">Call to Action</a></li>
                                 <li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
                             </ul>
-                        </li> {% endcomment %}
+                        </li>
+                        {% endcomment %}
                     </ul><!-- End .menu -->
                 </nav><!-- End .main-nav -->
             </div><!-- End .col-lg-9 -->
             <div class="header-right">
                 {% comment %} <i class="la la-lightbulb-o"></i> {% endcomment %}
-                <p>Sign In/Sign Up</span></p>
+                <p><a href="#signin-modal" data-toggle="modal">Sign In/Sign Up</a></span></p>
             </div>
         </div><!-- End .container -->
     </div><!-- End .header-bottom -->
