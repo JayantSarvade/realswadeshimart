@@ -11,7 +11,7 @@ def cart(request):
     return render(request, 'cart.html')
 
 
-def wishlist(request):
+def productwishlist(request):
     return render(request, 'wishlist.html')
 
 
@@ -41,3 +41,19 @@ def adminprofile(request):
 
 def admindashboard(request):
     return render(request, 'admindash.html')
+
+
+def adminlogin(request):
+    return render(request, 'adminlogin.html')
+
+
+def adminregister(request):
+    return render(request, 'adminregister.html')
+
+
+def adminforgotpass(request):
+    return render(request, 'adminforgotpass.html')
+
+
+def adminresetpass(request):
+    return render(request, 'adminresetpass.html')

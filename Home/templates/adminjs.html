@@ -2,14 +2,15 @@
 
 
 <!-- js placed at the end of the document so the pages load faster -->
-<script src="dashio/lib/jquery/jquery.min.js"></script>
-<script src="dashio/lib/bootstrap/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="dashio/lib/jquery.dcjqaccordion.2.7.js"></script>
-<script src="dashio/lib/jquery.scrollTo.min.js"></script>
-<script src="dashio/lib/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="{% static 'admin/lib/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'admin/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+<script class="include" type="text/javascript" src="{% static 'admin/lib/jquery.dcjqaccordion.2.7.js' %}"></script>
+<script src="{% static 'admin/lib/jquery.scrollTo.min.js' %}"></script>
+<script src="{% static 'admin/lib/jquery.nicescroll.js' %}" type="text/javascript"></script>
 <!--common script for all pages-->
-<script src="dashio/lib/common-scripts.js"></script>
+<script src="{% static 'admin/lib/common-scripts.js' %}"></script>
 <!--script for this page-->
+<script src="{% static 'lib/form-validation-script.js' %}"></script>
 <!-- MAP SCRIPT - ALL CONFIGURATION IS PLACED HERE - VIEW OUR DOCUMENTATION FOR FURTHER INFORMATION -->
 <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
@@ -40,15 +41,15 @@
 <script src="{% static ' dashio/lib/jquery/jquery.min.js' %}"></script>
 <script type="text/javascript" language="javascript" src="{% static ' dashio/lib/advanced-datatable/js/jquery.js' %}">
 </script>
-<script src="{% static 'dashio/lib/bootstrap/js/bootstrap.min.js' %} "></script>
-<script class="include" type="text/javascript" src="{% static 'dashio/lib/jquery.dcjqaccordion.2.7.js' %} "></script>
-<script src="{% static 'dashio/lib/jquery.scrollTo.min.js' %} "></script>
-<script src="{% static 'dashio/lib/jquery.nicescroll.js' %} " type="text/javascript"></script>
+<script src="{% static 'admin/lib/bootstrap/js/bootstrap.min.js' %} "></script>
+<script class="include" type="text/javascript" src="{% static 'admin/lib/jquery.dcjqaccordion.2.7.js' %} "></script>
+<script src="{% static 'admin/lib/jquery.scrollTo.min.js' %} "></script>
+<script src="{% static 'admin/lib/jquery.nicescroll.js' %} " type="text/javascript"></script>
 <script type="text/javascript" language="javascript"
     src="{% static ' dashio/lib/advanced-datatable/js/jquery.dataTables.js' %}"></script>
-<script type="text/javascript" src="{% static 'dashio/lib/advanced-datatable/js/DT_bootstrap.js' %} "></script>
+<script type="text/javascript" src="{% static 'admin/lib/advanced-datatable/js/DT_bootstrap.js' %} "></script>
 <!--common script for all pages-->
-<script src="{% static 'dashio/lib/common-scripts.js' %} "></script>
+<script src="{% static 'admin/lib/common-scripts.js' %} "></script>
 <!--script for this page-->
 <script type="text/javascript">
     /* Formating function for row details */
@@ -104,11 +105,11 @@
             if (oTable.fnIsOpen(nTr)) {
                 /* This row is already open - close it */
                 this.src =
-                    "{% static 'dashio/lib/advanced-datatable/media/images/details_open.png' %} ";
+                    "{% static 'admin/lib/advanced-datatable/media/images/details_open.png' %} ";
                 oTable.fnClose(nTr);
             } else {
                 /* Open this row */
-                this.src = "{% static 'dashio/lib/advanced-datatable/images/details_close.png' %} ";
+                this.src = "{% static 'admin/lib/advanced-datatable/images/details_close.png' %} ";
                 oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
             }
         });

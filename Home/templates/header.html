@@ -107,7 +107,7 @@
                 </div><!-- End .compare-dropdown -->
 
                 <div class="wishlist">
-                    <a href="wishlist.html" title="Wishlist">
+                    <a href="{% url 'productwishlist' %}" title="Wishlist">
                         <div class="icon">
                             <i class="icon-heart-o"></i>
                             <span class="wishlist-count badge">3</span>
@@ -749,7 +749,7 @@
                                                         <li><a href=" {% url 'list' %}">Shop List</a></li>
                                                         <li><a href="{% url 'cart' %}">Cart</a></li>
                                                         <li><a href="checkout.html">Checkout</a></li>
-                                                        <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                                        <li><a href="{% url 'productwishlist' %}">Wishlist</a></li>
                                                         <li><a href="dashboard.html">My Account</a></li>
                                                         <li><a href="#">Lookbook</a></li>
                                                         {% comment %}
@@ -791,7 +791,7 @@
                                                     <ul>
                                                         <li><a href="{% url 'cart' %}">Cart</a></li>
                                                         <li><a href="checkout.html">Checkout</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                                        <li><a href="{% url 'productwishlist' %}">Wishlist</a></li>
                                                         <li><a href="dashboard.html">My Account</a></li>
                                                         <li><a href="#">Lookbook</a></li>
                                                     </ul>
