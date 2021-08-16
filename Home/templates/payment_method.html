@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  {% block title %}Molla - Bootstrap eCommerce Template{% endblock title %}
+  {%block content%}
+
+  <div class="page-header text-center" style="background-color: #ccebff">
+    <div class="container">
+      <h1 class="page-title">Add Payment Methods</h1>
+    </div>
+    <!-- End .container -->
+  </div>
+
+  <br />
+
+  <div class="container">
+    <form action="#">
+      <div class="row">
+        <div class="col-sm-6">
+          &nbsp;&nbsp;&nbsp;&nbsp; <label>Payment Method *</label>
+          <input type="text" class="form-control" required />
+        </div>
+        <!-- End .col-sm-6 -->
+
+        <div class="col-sm-6">
+          &nbsp;&nbsp;&nbsp;&nbsp;<label> Name on Card *</label>
+          <input type="text" class="form-control" required />
+        </div>
+
+        <!-- End .col-sm-6 -->
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          &nbsp;&nbsp;&nbsp;&nbsp; <label>Card Number*</label>
+          <input type="text" class="form-control" required />
+        </div>
+        <!-- End .col-sm-6 -->
+
+        <div class="col-sm-6">
+          &nbsp;&nbsp;&nbsp;&nbsp;<label>Expiry month *</label>
+          <input type="text" class="form-control" required />
+        </div>
+
+        <!-- End .col-sm-6 -->
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          &nbsp;&nbsp;&nbsp;&nbsp; <label>Expiry Year *</label>
+          <input type="text" class="form-control" required />
+        </div>
+        <div class="col-sm-6">
+          &nbsp;&nbsp;&nbsp;&nbsp; <label> Mobile Number *</label>
+          <input type="text" class="form-control" required />
+        </div>
+      </div>
+      <!-- End .col-sm-6 -->
+
+      <!-- End .col-sm-6 -->
+
+      <br />
+
+      <button type="submit" class="btn btn-success align-center">
+        <span class="">SAVE CARD</span>
+        <i class="icon-long-arrow-right"></i>
+      </button>
+    </form>
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+  {%endblock content%}
+</html>
