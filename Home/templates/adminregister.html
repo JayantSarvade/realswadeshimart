@@ -7,7 +7,7 @@
 {% block admincontent %}
 <section id="container">
 
-  <aside>
+  {% comment %} <aside>
     <div id="sidebar" class="nav-collapse ">
       <!-- sidebar menu start-->
       <ul class="sidebar-menu" id="nav-accordion">
@@ -125,9 +125,9 @@
       </ul>
       <!-- sidebar menu end-->
     </div>
-  </aside>
+  </aside> {% endcomment %}
 
-  <section id="main-content">
+  <section {% comment  %} id="main-content" {% endcomment %}>
     <section class="wrapper">
       {% comment %}
       <h3><i class="fa fa-angle-right"></i> Form Validation</h3>

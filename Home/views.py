@@ -39,10 +39,6 @@ def adminprofile(request):
     return render(request, 'adminprofile.html')
 
 
-def admindashboard(request):
-    return render(request, 'admindash.html')
-
-
 def adminlogin(request):
     return render(request, 'adminlogin.html')
 
@@ -57,3 +53,23 @@ def adminforgotpass(request):
 
 def adminresetpass(request):
     return render(request, 'adminresetpass.html')
+
+
+def admindash(request):
+    return render(request, 'admindash.html')
+
+
+def adminproducts(request):
+    return render(request, 'adminproducts.html')
+
+
+def admincustomers(request):
+    return render(request, 'admincustomers.html')
+
+
+def adminseller(request):
+    return render(request, 'adminseller.html')
+
+
+def adminrating(request):
+    return render(request, 'adminrating.html')
