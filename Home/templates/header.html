@@ -1,6 +1,9 @@
 {% load static %}
 
 <header class="header header-intro-clearance header-4">
+
+    {% comment %}
+
     <div class="header-top">
         <div class="container">
             <div class="header-left">
@@ -13,8 +16,31 @@
                     <li>
                         <a href="#">Links</a>
                         <ul>
-                            
-                    
+
+                            <li>
+                                <div class="header-dropdown">
+                                    <a href="#">USD</a>
+                                    <div class="header-menu">
+                                        <ul>
+                                            <li><a href="#">Eur</a></li>
+                                            <li><a href="#">Usd</a></li>
+                                        </ul>
+                                    </div><!-- End .header-menu -->
+                                </div>
+                            </li>
+                            <li>
+                                <div class="header-dropdown">
+                                    <a href="#">English</a>
+                                    <div class="header-menu">
+                                        <ul>
+                                            <li><a href="#">English</a></li>
+                                            <li><a href="#">French</a></li>
+                                            <li><a href="#">Spanish</a></li>
+                                        </ul>
+                                    </div><!-- End .header-menu -->
+                                </div>
+                            </li>
+
                             <li><a href="#signin-modal" data-toggle="modal">Sign in / Sign up</a></li>
                         </ul>
                     </li>
@@ -24,6 +50,8 @@
         </div><!-- End .container -->
     </div><!-- End .header-top -->
 
+    {% endcomment %}
+
     <div class="header-middle">
         <div class="container">
             <div class="header-left">
@@ -32,8 +60,10 @@
                     <i class="icon-bars"></i>
                 </button>
 
-                <a href="{% url 'home' %}" class="logo">
-                    <img src="{% static 'assets/images/demos/demo-4/logo.jpg' %}" alt="Molla Logo" width="105"
+
+                <a href="/" class="logo">
+                    <img src="{% static 'assets/images/demos/demo-4/logo.png' %} " alt="Molla Logo" width="105"
+
                         height="25">
                 </a>
             </div><!-- End .header-left -->
@@ -53,10 +83,40 @@
             </div>
 
             <div class="header-right">
-                
+
+                <div class="dropdown compare-dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" data-display="static" title="Compare Products"
+                        aria-label="Compare Products">
+                        <div class="icon">
+                            <i class="icon-random"></i>
+                        </div>
+                        <p>Compare</p>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <ul class="compare-products">
+                            <li class="compare-product">
+                                <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                <h4 class="compare-product-title"><a href="product.html">Blue Night Dress</a></h4>
+                            </li>
+                            <li class="compare-product">
+                                <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                <h4 class="compare-product-title"><a href="product.html">White Long Skirt</a></h4>
+                            </li>
+                        </ul>
+
+                        <div class="compare-actions">
+                            <a href="#" class="action-link">Clear All</a>
+                            <a href="#" class="btn btn-outline-primary-2"><span>Compare</span><i
+                                    class="icon-long-arrow-right"></i></a>
+                        </div>
+                    </div><!-- End .dropdown-menu -->
+                </div><!-- End .compare-dropdown -->
 
                 <div class="wishlist">
-                    <a href="{% url 'wishlist' %}" title="Wishlist">
+                    <a href="{% url 'productwishlist' %}" title="Wishlist">
+
                         <div class="icon">
                             <i class="icon-heart-o"></i>
                             <span class="wishlist-count badge">3</span>
@@ -91,7 +151,9 @@
 
                                 <figure class="product-image-container">
                                     <a href="product.html" class="product-image">
-                                        <img src="{% static 'assets/images/products/cart/product-1.jpg' %}"
+
+                                        <img src="{% static 'assets/images/products/cart/product-1.jpg' %} "
+
                                             alt="product">
                                     </a>
                                 </figure>
@@ -112,7 +174,9 @@
 
                                 <figure class="product-image-container">
                                     <a href="product.html" class="product-image">
-                                        <img src=" {% static 'assets/images/products/cart/product-2.jpg' %} "
+
+                                        <img src="{% static 'assets/images/products/cart/product-2.jpg' %} "
+
                                             alt="product">
                                     </a>
                                 </figure>
@@ -128,8 +192,9 @@
 
                         <div class="dropdown-cart-action">
                             <a href="{% url 'cart' %}" class="btn btn-primary">View Cart</a>
+
                             <a href="{% url 'checkout' %} " class="btn btn-outline-primary-2"><span>Checkout</span><i
-                                    class="icon-long-arrow-right"></i></a>
+
                         </div><!-- End .dropdown-cart-total -->
                     </div><!-- End .dropdown-menu -->
                 </div><!-- End .cart-dropdown -->
@@ -140,6 +205,7 @@
     <div class="header-bottom sticky-header">
         <div class="container">
             <div class="header-left">
+
                 <div class="dropdown category-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false" data-display="static" title="Browse Categories">
@@ -157,11 +223,12 @@
                                 <li><a href="{% url 'wishlist' %}">My Wishlist </a></li>
                                 <li><a href="{% url 'my_account' %}">My Account </a></li>
                                 <li><a href="#">My Notification </a></li>
-                               
+
                             </ul><!-- End .menu-vertical -->
                         </nav><!-- End .side-nav -->
                     </div><!-- End .dropdown-menu -->
                 </div><!-- End .category-dropdown -->
+
             </div><!-- End .header-left -->
 
             <div class="header-center">
@@ -169,6 +236,7 @@
                     <ul class="menu sf-arrows">
                         <li class="megamenu-container active">
                             <a href="{% url 'home' %}" class="sf-with-ul">Home</a>
+
 
                             <div class="megamenu demo">
                                 <div class="menu-col">
@@ -315,8 +383,9 @@
                                             <a href="index-18.html">
                                                 <span class="demo-bg"
                                                     style="background-image: url(assets/images/menu/demos/18.jpg);"></span>
-                                                <span class="demo-title">18 - fashion store (with
-                                                    sidebar)</span>
+
+                                                <span class="demo-title">18 - fashion store (with sidebar)</span>
+
                                             </a>
                                         </div><!-- End .demo-item -->
 
@@ -356,8 +425,9 @@
                                             <a href="index-23.html">
                                                 <span class="demo-bg"
                                                     style="background-image: url(assets/images/menu/demos/23.jpg);"></span>
-                                                <span class="demo-title">23 - fashion left navigation
-                                                    store</span>
+
+                                                <span class="demo-title">23 - fashion left navigation store</span>
+
                                             </a>
                                         </div><!-- End .demo-item -->
 
@@ -372,78 +442,96 @@
                                     </div><!-- End .demo-list -->
 
                                     <div class="megamenu-action text-center">
-                                        <a href="#" class="btn btn-outline-primary-2 view-all-demos"><span>View
-                                                All Demos</span><i class="icon-long-arrow-right"></i></a>
+
+                                        <a href="#" class="btn btn-outline-primary-2 view-all-demos"><span>View All
+                                                Demos</span><i class="icon-long-arrow-right"></i></a>
                                     </div><!-- End .text-center -->
                                 </div><!-- End .menu-col -->
-                            </div><!-- End .megamenu -->
+                            </div><!-- End .megamenu demo -->
+                            {% endcomment %}
                         </li>
                         <li>
-                            <a href="category.html" class="sf-with-ul">Shop</a>
+                            <a href="category.html">Shop</a>
 
-                            <div class="megamenu megamenu-md">
+                            <div class="megamenu megamenu-sm">
                                 <div class="row no-gutters">
                                     <div class="col-md-8">
+
                                         <div class="menu-col">
                                             <div class="row">
                                                 <div class="col-md-6">
+                                                    {% comment %}
                                                     <div class="menu-title">Shop with sidebar</div>
-                                                    <!-- End .menu-title -->
+                                                    {% endcomment %}
                                                     <ul>
-                                                        <li><a href="{% url 'shop_list' %}">Shop List</a></li>
-                                                        <li><a href="category-2cols.html">Shop Grid 2
-                                                                Columns</a></li>
+                                                        <li><a href=" {% url 'list' %}">Shop List</a></li>
+                                                        <li><a href="{% url 'cart' %}">Cart</a></li>
+                                                        <li><a href="checkout.html">Checkout</a></li>
+                                                        <li><a href="{% url 'productwishlist' %}">Wishlist</a></li>
+                                                        <li><a href="dashboard.html">My Account</a></li>
+                                                        <li><a href="#">Lookbook</a></li>
+                                                        {% comment %}
+                                                        <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
                                                         <li><a href="category.html">Shop Grid 3 Columns</a></li>
-                                                        <li><a href="category-4cols.html">Shop Grid 4
-                                                                Columns</a></li>
-                                                        <li><a href="category-market.html"><span>Shop
-                                                                    Market<span
-                                                                        class="tip tip-new">New</span></span></a>
-                                                        </li>
+                                                        <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
+                                                        <li><a href="category-market.html"><span>Shop Market<span
+                                                                        class="tip tip-new">New</span></span></a></li>
+                                                        {% endcomment %}
                                                     </ul>
+                                                    <!-- End .menu-title -->
+
+                                                    {% comment %}
 
                                                     <div class="menu-title">Shop no sidebar</div>
                                                     <!-- End .menu-title -->
                                                     <ul>
                                                         <li><a href="category-boxed.html"><span>Shop Boxed No
                                                                     Sidebar<span
-                                                                        class="tip tip-hot">Hot</span></span></a>
-                                                        </li>
+
+                                                                        class="tip tip-hot">Hot</span></span></a></li>
                                                         <li><a href="category-fullwidth.html">Shop Fullwidth No
                                                                 Sidebar</a></li>
                                                     </ul>
+                                                    {% endcomment %}
                                                 </div><!-- End .col-md-6 -->
+
+
+                                                {% comment %}
 
                                                 <div class="col-md-6">
                                                     <div class="menu-title">Product Category</div>
-                                                    <!-- End .menu-title -->
-                                                    <ul>
-                                                        <li><a href="product-category-boxed.html">Product
-                                                                Category Boxed</a></li>
+                                                    <!-- E
+                                                        <li><a href="product-category-boxed.html">Product Category
+                                                                Boxed</a></li>
                                                         <li><a href="product-category-fullwidth.html"><span>Product
                                                                     Category Fullwidth<span
-                                                                        class="tip tip-new">New</span></span></a>
-                                                        </li>
+                                                                        class="tip tip-new">New</span></span></a></li>
                                                     </ul>
-                                                    <div class="menu-title">Shop Pages</div>
-                                                    <!-- End .menu-title -->
+                                                    <div class="menu-title">Shop Pages</div><!-- End .menu-title -->
                                                     <ul>
                                                         <li><a href="{% url 'cart' %}">Cart</a></li>
-                                                        <li><a href="{% url 'checkout' %}">Checkout</a></li>
-                                                        <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                                        <li><a href="checkout.html">Checkout</a></li>
+                                                        <li><a href="{% url 'productwishlist' %}">Wishlist</a></li>
+
                                                         <li><a href="dashboard.html">My Account</a></li>
                                                         <li><a href="#">Lookbook</a></li>
                                                     </ul>
                                                 </div><!-- End .col-md-6 -->
+
+                                                {% endcomment %}
                                             </div><!-- End .row -->
+
                                         </div><!-- End .menu-col -->
+
+
                                     </div><!-- End .col-md-8 -->
 
                                     <div class="col-md-4">
                                         <div class="banner banner-overlay">
                                             <a href="category.html" class="banner banner-menu">
-                                                <img src=" {% static 'assets/images/menu/banner-1.jpg' %} "
-                                                    alt="Banner">
+
+                                                <img src="{% static 'assets/images/menu/banner-1.jpg' %} " alt="Banner">
+
 
                                                 <div class="banner-content banner-content-top">
                                                     <div class="banner-title text-white">Last
@@ -464,8 +552,9 @@
                                 <div class="row no-gutters">
                                     <div class="col-md-6">
                                         <div class="menu-col">
-                                            <div class="menu-title">Product Details</div>
-                                            <!-- End .menu-title -->
+
+                                            <div class="menu-title">Product Details</div><!-- End .menu-title -->
+
                                             <ul>
                                                 <li><a href="product.html">Default</a></li>
                                                 <li><a href="product-centered.html">Centered</a></li>
@@ -483,13 +572,14 @@
                                     <div class="col-md-6">
                                         <div class="banner banner-overlay">
                                             <a href="category.html">
-                                                <img src=" {% static 'assets/images/menu/banner-2.jpg' %} "
-                                                    alt="Banner">
+
+                                                <img src="{% static 'assets/images/menu/banner-2.jpg' %} " alt="Banner">
 
                                                 <div class="banner-content banner-content-bottom">
                                                     <div class="banner-title text-white">New
-                                                        Trends<br><span><strong>spring 2019</strong></span>
-                                                    </div><!-- End .banner-title -->
+                                                        Trends<br><span><strong>spring 2019</strong></span></div>
+                                                    <!-- End .banner-title -->
+
                                                 </div><!-- End .banner-content -->
                                             </a>
                                         </div><!-- End .banner -->
@@ -497,6 +587,9 @@
                                 </div><!-- End .row -->
                             </div><!-- End .megamenu megamenu-sm -->
                         </li>
+
+                        {% comment %}
+
                         <li>
                             <a href="#" class="sf-with-ul">Pages</a>
 
@@ -559,8 +652,9 @@
                                     <ul>
                                         <li><a href="single.html">Default with sidebar</a></li>
                                         <li><a href="single-fullwidth.html">Fullwidth no sidebar</a></li>
-                                        <li><a href="single-fullwidth-sidebar.html">Fullwidth with sidebar</a>
-                                        </li>
+
+                                        <li><a href="single-fullwidth-sidebar.html">Fullwidth with sidebar</a></li>
+
                                     </ul>
                                 </li>
                             </ul>
@@ -585,6 +679,7 @@
                                 <li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
                             </ul>
                         </li>
+
                     </ul><!-- End .menu -->
                 </nav><!-- End .main-nav -->
             </div><!-- End .header-center -->

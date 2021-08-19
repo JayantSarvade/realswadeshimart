@@ -1,6 +1,9 @@
+
+
 from django.contrib import admin
 from django.urls import path
 from . import views
+
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
@@ -16,9 +19,23 @@ urlpatterns = [
     path('adminprofile/', views.adminprofile, name='adminprofile'),
     path('admindash/', views.admindashboard, name='admindash'),
     path('add_product/', views.add_product, name='add_product'),
-    path('my_account/', views.my_account, name='my_account'),
     path('wishlist/', views.wishlist, name='wishlist'),
     path('product_category/', views.product_category, name='product_category'),
     path('payment_method/', views.payment_method, name='payment_method'),
+    path('detail/', views.detailview, name='detail'),
+    path('productwishlist/', views.productwishlist, name='productwishlist'),
+    path('twocolview/', views.twocolview, name='2col'),
+    path('threecolview/', views.threecolview, name='3col'),
+    path('fourcolview/', views.fourcolview, name='4col'),
+    path('adminprofile/', views.adminprofile, name='adminprofile'),
+    path('adminlogin/', views.adminlogin, name='adminlogin'),
+    path('adminregister/', views.adminregister, name='adminregister'),
+    path('adminforgotpass/', views.adminforgotpass, name='adminforgotpass'),
+    path('adminresetpass/', views.adminresetpass, name='adminresetpass'),
+    path('admindash/', views.admindash, name='admindash'),
+    path('adminproducts/', views.adminproducts, name='adminproducts'),
+    path('admincustomers/', views.admincustomers, name='admincustomers'),
+    path('adminseller/', views.adminseller, name='adminseller'),
+    path('adminrating/', views.adminrating, name='adminrating'),
 
 ]
