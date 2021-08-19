@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.contrib import messages
+from .forms import RegisterForm
 # Create your views here.
 
 
@@ -15,8 +16,16 @@ def forget_pasword(request):
     return render(request, 'forget_password.html')
 
 
-def register(request):
-    return render(request, 'register.html')
+def user_register(request):
+    if request.method == 'POST':
+        register_form = RegisterForm(request.POST)
+        if register_form.is_valid():
+            user = register_form.save()
+            messages.success(
+                request, 'Congratulations you have signed in successful')
+    else:
+        register_form = RegisterForm()
+    return render(request, 'register.html', {'form': register_form})
 
 
 def signin(request):
