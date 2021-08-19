@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  {% block title %}Molla - Bootstrap eCommerce Template{% endblock title %}
+  {%block content%}
+
+  <div
+  class="page-header text-center"
+  style="background-color: #ccebff"
+  >
+  <div class="container">
+    <h1 class="page-title">ADD PRODUCT</h1>
+  </div>
+  <!-- End .container -->
+</div>
+
+<br>
+
+
+<div class="container">
+  <form action="#">
+    <div class="row">
+      <div class="col-sm-6">
+        &nbsp;&nbsp;&nbsp;&nbsp; <label>Product Name *</label>
+        <input type="text" class="form-control" required />
+      </div>
+      <!-- End .col-sm-6 -->
+
+      <div class="col-sm-6">
+        &nbsp;&nbsp;&nbsp;&nbsp;<label>Product Description *</label>
+        <input type="text" class="form-control" required />
+      </div>
+
+      <!-- End .col-sm-6 -->
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        &nbsp;&nbsp;&nbsp;&nbsp; <label>Cost Price (&#x20B9;)*</label>
+        <input type="text" class="form-control" required />
+      </div>
+      <!-- End .col-sm-6 -->
+
+      <div class="col-sm-6">
+        &nbsp;&nbsp;&nbsp;&nbsp;<label>Discount Price (&#x20B9;)*</label>
+        <input type="text" class="form-control" required />
+      </div>
+
+      <!-- End .col-sm-6 -->
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        &nbsp;&nbsp;&nbsp;&nbsp; <label>Brand Name *</label>
+        <input type="text" class="form-control" required />
+      </div>
+      <!-- End .col-sm-6 -->
+
+      <div class="col-sm-6">
+        &nbsp;&nbsp;&nbsp;&nbsp;<label>Quantity In Stock*</label>
+        <input type="text" class="form-control" required />
+      </div>
+
+      <br />
+
+      <!-- End .col-sm-6 -->
+
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <p id="demo" onclick="myFunction()">
+        <button class="btn btn-primary">Add New Featues</button>
+      </p>
+<div></div>
+      <script>
+        function myFunction() {
+          document.getElementById("demo").innerHTML = "Paragraph changed!";
+        }
+      </script>
+      <br />
+      <br />
+      <br />
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class="dropdown">
+          <button
+            class="dropdown-toggle btn btn-primary"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Select Product Category
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- End .col-sm-6 -->
+
+   
+
+      <div id="msg"></div>
+      <form method="post" id="image-form">
+        <input type="file" name="img[]" class="file" accept="image/*" />
+        <div class="input-group my-3">
+          <input
+            type="text"
+            class="form-control"
+            disabled
+            placeholder="Upload Product Images"
+            id="file"
+          />
+          <div class="input-group-append">
+            <button type="button" class="browse btn btn-primary">
+              Choose Image File
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="ml-2 col-sm-6">
+      <img
+        src="https://placehold.it/80x80"
+        id="preview"
+        class="img-thumbnail"
+      />
+    </div>
+    <br />
+    <br />
+
+    <br />
+    <button type="submit" class="btn btn-success align-center">
+      <span class="">SAVE PRODUCT</span>
+      <i class="icon-long-arrow-right"></i>
+    </button>
+  </form>
+
+
+</div>
+ 
+
+  <br />
+  <br />
+  <br />
+  <br />
+  {%endblock content%}
+</html>
